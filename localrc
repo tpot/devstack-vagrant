@@ -1,0 +1,51 @@
+# Credentials
+ADMIN_PASSWORD=devstack
+MYSQL_PASSWORD=devstack
+RABBIT_PASSWORD=devstack
+SERVICE_PASSWORD=devstack
+SERVICE_TOKEN=token
+ 
+GIT_BASE=git://192.168.1.39
+
+# Services
+disable_service n-net
+disable_service tempest
+disable_service h-eng
+disable_service h-api
+disable_service h-api-cfn
+disable_service h-api-cw
+enable_service quantum 
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-meta
+enable_service q-l3
+enable_service s-proxy
+enable_service s-object
+enable_service s-container
+enable_service s-account
+ 
+# Branches
+REQUIREMENTS_BRANCH=stable/mitaka
+NOVA_BRANCH=stable/mitaka
+CINDER_BRANCH=stable/mitaka
+GLANCE_BRANCH=stable/mitaka
+HORIZON_BRANCH=stable/mitaka
+KEYSTONE_BRANCH=stable/mitaka
+NEUTRON_BRANCH=stable/mitaka
+SWIFT_BRANCH=stable/mitaka
+ 
+# Neutron Stuff
+#OVS_VLAN_RANGES=RegionOne:1:4000
+#OVS_ENABLE_TUNNELING=False
+ 
+# Swift stuff
+#SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
+#SWIFT_REPLICAS=1
+ 
+# Output
+#LOGFILE=/opt/stack/logs/stack.sh.log
+#VERBOSE=True
+#DEBUG=False
+#LOG_COLOR=False
+#SCREEN_LOGDIR=/opt/stack/logs
