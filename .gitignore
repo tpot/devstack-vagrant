@@ -1,3 +1,4 @@
 .vagrant/
 apt_cache/
 pip_cache/
+package.box
