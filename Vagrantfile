@@ -11,11 +11,6 @@ Vagrant.configure(2) do |config|
     v.cpus = 2
   end
 
-  # Port forwarding for OpenStack services
-  [35357, 5000, 8774, 8776, 9696, 9191, 9292, 6080, 8080, 80].each do |port|
-    config.vm.network "forwarded_port", guest: port, host: port, protocol: 'tcp'
-  end
-
   if Vagrant.has_plugin?("vagrant-proxyconf")
     config.proxy.http     = ENV["http_proxy"]
     config.proxy.https    = ENV["https_proxy"]
