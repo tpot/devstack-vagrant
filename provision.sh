@@ -22,6 +22,10 @@ sudo apt-get install -y git
 cp /vagrant/localrc devstack
 (cd devstack ; ./stack.sh)
 
+# Install well-known insecure public key
+mkdir -p ~/.ssh
+cp vagrant_insecure.pub ~/.ssh/authorized_keys
+
 # Copy back apt and pip cache data
 sudo rsync -a /var/cache/apt/ /vagrant/apt_cache
 sudo rsync -a /root/.cache/pip/ /vagrant/pip_cache
